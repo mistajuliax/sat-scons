@@ -22,7 +22,7 @@ def render_appleseed(target_file, base_color_tex, normal_tex, roughness_tex, met
         project_text = project_text.replace("$frameHeight", str(resolution[1]))
 
         # Write the new project file to disk.
-        project_file = os.path.splitext(target_file)[0] + ".appleseed"
+        project_file = f"{os.path.splitext(target_file)[0]}.appleseed"
         with open(project_file, "w") as file:
             file.write(project_text)
 
